@@ -67,7 +67,7 @@ const TopNav = () => {
             <div className="profile hover:cursor-pointer rounded-full w-[30px] h-[30px] relative overflow-hidden">
               <Image
                 className="object-cover"
-                src="/images/ryou.jpg"
+                src="/images/plainguy.jpg"
                 alt="profile img"
                 fill
               />

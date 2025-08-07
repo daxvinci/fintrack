@@ -30,29 +30,29 @@ const Header = () => {
           <div className="clients flex gap-4 items-center">
             <div className="flex items-center -space-x-2">
               <Image
-                className="w-8 h-8 rounded-full border-2 border-white z-40"
-                src="/images/ryou.jpg"
+                className="w-8 h-8 object-cover rounded-full border-2 border-white z-40"
+                src="/images/plainguy.jpg"
                 width={32}
                 height={32}
                 alt="client profile"
               />
               <Image
-                className="w-8 h-8 rounded-full border-2 border-white z-30"
-                src="/images/ryou.jpg"
+                className="w-8 h-8 object-cover rounded-full border-2 border-white z-30"
+                src="/images/uvgirl.jpg"
                 width={24}
                 height={24}
                 alt="client profile"
               />
               <Image
-                className="w-8 h-8 rounded-full border-2 border-white z-20"
-                src="/images/ryou.jpg"
+                className="w-8 h-8 object-cover rounded-full border-2 border-white z-20"
+                src="/images/galgadont.jpg"
                 width={24}
                 height={24}
                 alt="client profile"
               />
               <Image
-                className="w-8 h-8 rounded-full border-2 border-white z-10"
-                src="/images/ryou.jpg"
+                className="w-8 h-8 object-cover rounded-full border-2 border-white z-10"
+                src="/images/charlesdeluvio.jpg"
                 width={24}
                 height={24}
                 alt="client profile"
