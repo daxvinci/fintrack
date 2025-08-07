@@ -5,13 +5,16 @@ import Overview from "@/components/Overview";
 import SideNav from "@/components/SideNav";
 import Transaction from "@/components/Transaction";
 import { useState } from "react";
+import { useThemeContext } from "./ThemeContext";
 
 
 export default function Home() {
   const [view,setView] = useState("overview")
+  const {navActive} = useThemeContext()
   return (
     <div className="py-16 flex gap-8">
-      <SideNav />
+      
+      {navActive && <SideNav />}
       <main className="flex flex-col flex-1 gap-4 row-start-2 items-center sm:items-start">
         <Header />
         <div className="view-toggle border-b w-full border-gray-400 flex gap-4">

@@ -28,3 +28,10 @@ export type TableHeadData = {
   currency: string;
   type: string;
 }
+
+export type Bool = {
+  navActive?: boolean;
+  setNavActive?: React.Dispatch<React.SetStateAction<boolean>>;
+  searchValue?: string;
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
+};

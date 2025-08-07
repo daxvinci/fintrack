@@ -1,15 +1,17 @@
 "use client"
+import { useThemeContext } from "@/app/ThemeContext";
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
 import { IoGridOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const TopNav = () => {
+    const {navActive,setNavActive=()=>{}} = useThemeContext()
     return ( 
         <>
             <nav className="navbar flex justify-between items-center gap-4">
                 <div className="left-nav flex items-center gap-4">
-                        <RxHamburgerMenu className="hover:cursor-pointer" size={20} />
+                        <RxHamburgerMenu onClick={()=>setNavActive(!navActive)} className="hover:cursor-pointer" size={20} />
                     <div className="logo">
                         <Image src="/fintrack.svg" alt="logo" width={100} height={100} />
                     </div>
