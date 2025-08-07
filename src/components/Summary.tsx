@@ -12,7 +12,7 @@ const Summary = () => {
           >
             <div className="title-line flex gap-2 justify-between items-center">
               <h2 className="title font-bold">{item.title}</h2>
-              <MdOutlineMoreHoriz />
+              <MdOutlineMoreHoriz className="hover:cursor-pointer" />
             </div>
             <div className="big-value text-4xl font-bold">${item.value.toLocaleString()}</div>
             <p className="percentage text-[#437d8e]">{item.percentage}</p>

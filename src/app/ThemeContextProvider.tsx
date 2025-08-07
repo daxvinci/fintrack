@@ -11,11 +11,12 @@ type ThemeContextProps = {
 
 export const ThemeContextProvider = ({children}:ThemeContextProps) => {
     const [navActive, setNavActive] = useState<boolean>(true);
+    const [searchActive, setSearchActive] = useState<boolean>(false);
     const [searchValue, setSearchValue] = useState<string>('')
     const [active, setActive] = useState("dashboard");
 
 
-    return <ThemeContext.Provider value={{active,setActive,navActive,setNavActive,searchValue, setSearchValue}}>{children}</ThemeContext.Provider>
+    return <ThemeContext.Provider value={{active,setActive,searchActive,setSearchActive,navActive,setNavActive,searchValue, setSearchValue}}>{children}</ThemeContext.Provider>
 }
 
 

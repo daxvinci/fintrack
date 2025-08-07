@@ -10,6 +10,12 @@ const Table = () => {
             <tr>
               <th className="py-2 w-1/2">
                 <span className="flex items-center gap-2 border-b border-gray-300 py-3 mr-2">
+                  {tableHeadData.date}
+                  <MdOutlineArrowDropDown className="hover:cursor-pointer" />
+                </span>
+              </th>
+              <th className="py-2">
+                <span className="flex items-center gap-2 border-b border-gray-300 py-3 mr-2">
                   {tableHeadData.remark}
                   <MdOutlineArrowDropDown className="hover:cursor-pointer" />
                 </span>
@@ -28,13 +34,7 @@ const Table = () => {
               </th>
               <th className="py-2">
                 <span className="flex items-center gap-2 border-b border-gray-300 py-3 mr-2">
-                  {tableHeadData.date}
-                  <MdOutlineArrowDropDown className="hover:cursor-pointer" />
-                </span>
-              </th>
-              <th className="py-2">
-                <span className="flex items-center gap-2 border-b border-gray-300 py-3 mr-2">
-                  {tableHeadData.remark}
+                  {tableHeadData.type}
                   <MdOutlineArrowDropDown className="hover:cursor-pointer" />
                 </span>
               </th>

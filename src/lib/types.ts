@@ -32,6 +32,8 @@ export type TableHeadData = {
 export type Bool = {
   active?: string;
   setActive?: React.Dispatch<React.SetStateAction<string>>;
+  searchActive?: boolean;
+  setSearchActive?: React.Dispatch<React.SetStateAction<boolean>>;
   navActive?: boolean;
   setNavActive?: React.Dispatch<React.SetStateAction<boolean>>;
   searchValue?: string;

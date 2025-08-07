@@ -1,12 +1,34 @@
 "use client"
-import { useThemeContext } from "@/app/ThemeContext";
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
 import { IoGridOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useThemeContext } from "@/app/ThemeContext";
+import { useEffect, useRef } from "react";
 
 const TopNav = () => {
-    const {navActive,setNavActive=()=>{}} = useThemeContext()
+    const {navActive,setSearchValue=()=>{},searchActive,setSearchActive=()=>{},setNavActive=()=>{}} =  useThemeContext()
+    const searchRef = useRef<HTMLDivElement>(null);
+    
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (
+          searchRef.current &&
+          !searchRef.current.contains(event.target as Node)
+        ) {
+          setSearchActive(false);
+        }
+      };
+
+      if (searchActive) {
+        document.addEventListener("mousedown", handleClickOutside);
+      }
+
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [searchActive, setSearchActive]);
+    
     return (
       <>
         <nav className="navbar flex justify-between items-center gap-4">
@@ -22,8 +44,22 @@ const TopNav = () => {
           </div>
 
           <div className="right-nav flex items-center gap-4">
-            <div className="search">
-              <CiSearch className="hover:cursor-pointer " size={20} />
+            <div ref={searchRef} className="search">
+              {searchActive ? (
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="border px-2 py-1 rounded-md text-sm"
+                  autoFocus
+                  onChange={(e) => setSearchValue(e.target.value)}
+                />
+              ) : (
+                <CiSearch
+                  onClick={() => setSearchActive(true)}
+                  className="hover:cursor-pointer"
+                  size={20}
+                />
+              )}
             </div>
             <div className="grid-icon hover:cursor-pointer">
               <IoGridOutline size={20} />
