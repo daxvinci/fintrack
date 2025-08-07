@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react";
+import { useThemeContext } from "@/app/ThemeContext";
 
 
 const SideNav = () => {
-    const [active, setActive] = useState("dashboard");
+    const {active,setActive=()=>{}} = useThemeContext()
     return ( 
         <>
         <ul className="sidenav sm:w-[20%]">
