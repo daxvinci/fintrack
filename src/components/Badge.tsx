@@ -1,0 +1,14 @@
+"use client"
+
+const Badge = ({text,color}:{text:string,color:string}) => {
+    return (
+      <>
+        <div className="badge flex gap-2 justify-center px-2 items-center bg-gray-200 rounded-2xl">
+          <div className={`badge-light w-[5px] h-[5px] rounded-full bg-[${color}] `} />
+          <p className="badge-text">{text}</p>
+        </div>
+      </>
+    );
+}
+ 
+export default Badge;
