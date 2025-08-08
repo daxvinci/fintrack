@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 import ThemeContextProvider from "./ThemeContextProvider";
+import { Public_Sans } from "next/font/google";
 
-
+const publicSans = Public_Sans({
+  subsets: ["latin"], // you can also add "latin-ext"
+  weight: ["400", "500", "700"], // choose weights you need
+});
 
 export const metadata: Metadata = {
   title: "Fintrack",
@@ -76,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-sans bg-[#FCFDFD] w-full min-h-screen p-8 sm:px-16 sm:pt-4 sm:pb-8 antialiased`}
+        className={`${publicSans.className} bg-[#FCFDFD] w-full min-h-screen p-8 sm:px-16 sm:pt-4 sm:pb-8 antialiased`}
       >
         <ThemeContextProvider>
           <TopNav />

@@ -19,7 +19,7 @@ const Header = () => {
             </div>
 
             <div className="head-nav-right flex gap-4 items-center">
-              <button className="share-button sm:text-base text-sm hover:cursor-pointer active:translate-y-2 transition-all duration-300 hover:bg-[#4B8B9F] py-1 px-3 rounded-2xl bg-[#4b8b9f]">
+              <button className="share-button sm:text-base text-sm hover:cursor-pointer active:translate-y-2 transition-all duration-300 hover:bg-[#4B8B9F] py-1 px-3 rounded-xl bg-[#4b8b9f]">
                 Share
               </button>
               <div className="more-button rounded-full p-2 active:scale-50 transition-all duration-300 hover:cursor-pointer border border-gray-400">
