@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#FCFDFD] w-full min-h-screen p-8 px-6 sm:px-16 sm:pt-4 sm:pb-8 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-[#FCFDFD] w-full min-h-screen p-8 sm:px-16 sm:pt-4 sm:pb-8 antialiased`}
       >
         <ThemeContextProvider>
           <TopNav />

@@ -12,8 +12,8 @@ const Table = () => {
     );
     return (
       <>
-        <div className="overflow-x-auto w-full">
-          <table className="w-full max-w-full text-left border-separate border-spacing-x-2">
+        <div className="w-full overflow-x-auto">
+          <table className="min-w-full text-left border-separate border-spacing-x-2">
             <thead className="bg-[#fcfdfd] w-full">
               <tr>
                 <th className="py-2 w-1/2">

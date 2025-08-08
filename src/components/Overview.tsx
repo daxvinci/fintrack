@@ -4,7 +4,7 @@ import Table from "./Table";
 const Overview = () => {
     return ( 
         <>
-            <div className="summary mt-4 text-2xl font-bold">Summary</div>
+            <div className="summary self-start mt-4 text-2xl font-bold">Summary</div>
             <Summary />
             <Table />
         </>
