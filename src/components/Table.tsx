@@ -67,7 +67,7 @@ const Table = () => {
                     <td className="border-b border-gray-300 py-3 px-3">
                       <Badge
                         text={data.type}
-                        color={data.type === "Credit" ? "#087a2e" : "#c6381b"}
+                        color={data.type === "Credit" ? "#3A6C7B" : "#C6381B"}
                       />
                     </td>
                   </tr>

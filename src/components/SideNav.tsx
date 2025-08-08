@@ -12,7 +12,7 @@ const SideNav = () => {
           className="side-nav-wrapper flex flex-col gap-6 sm:block
                backdrop-blur-lg sm:backdrop-blur-none sm:px-0 p-4 
          absolute inset-0 z-80 bg-[#FCFDFD]/90 
-         sm:bg-transparent sm:static transition-all duration-300 sm:w-[20%]"
+         sm:bg-transparent sm:static transition-all duration-300 sm:w-[25%]"
         >
           <div className="close-button">
             <MdOutlineClose
@@ -30,7 +30,7 @@ const SideNav = () => {
             <li
               onClick={() => setActive("dashboard")}
               className={`nav-itme py-2 px-4 rounded-3xl hover:cursor-pointer ${
-                active === "dashboard" ? "bg-gray-400 text-[#4e7b88]" : ""
+                active === "dashboard" ? "bg-gray-400 text-[#3A6C7B]" : ""
               }`}
             >
               Dashboard
@@ -38,7 +38,7 @@ const SideNav = () => {
             <li
               onClick={() => setActive("transaction")}
               className={`nav-itme py-2 px-4 rounded-3xl hover:cursor-pointer ${
-                active === "transaction" ? "bg-gray-400 text-[#4e7b88]" : ""
+                active === "transaction" ? "bg-gray-400 text-[#3A6C7B]" : ""
               }`}
             >
               Transaction
@@ -46,7 +46,7 @@ const SideNav = () => {
             <li
               onClick={() => setActive("reports")}
               className={`nav-itme py-2 px-4 rounded-3xl hover:cursor-pointer ${
-                active === "reports" ? "bg-gray-400 text-[#4e7b88]" : ""
+                active === "reports" ? "bg-gray-400 text-[#3A6C7B]" : ""
               }`}
             >
               Reports
@@ -54,7 +54,7 @@ const SideNav = () => {
             <li
               onClick={() => setActive("settings")}
               className={`nav-itme py-2 px-4 rounded-3xl hover:cursor-pointer ${
-                active === "settings" ? "bg-gray-400 text-[#4e7b88]" : ""
+                active === "settings" ? "bg-gray-400 text-[#3A6C7B]" : ""
               }`}
             >
               Settings

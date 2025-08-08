@@ -8,14 +8,16 @@ const Summary = () => {
         {summaryData.map((item, index) => (
           <div
             key={index}
-            className="gridlet flex flex-col gap-4 bg-gray-200 p-4 rounded-lg"
+            className="gridlet flex flex-col gap-4 bg-gray-200 p-6 rounded-2xl"
           >
             <div className="title-line flex gap-2 justify-between items-center">
               <h2 className="title font-bold">{item.title}</h2>
               <MdOutlineMoreHoriz className="hover:cursor-pointer" />
             </div>
-            <div className="big-value text-4xl font-bold">${item.value.toLocaleString()}</div>
-            <p className="percentage text-[#437d8e]">{item.percentage}</p>
+            <div className="big-value text-4xl font-bold">
+              ${item.value.toLocaleString()}
+            </div>
+            <p className="percentage text-[#3E7383]">{item.percentage}</p>
           </div>
         ))}
       </div>

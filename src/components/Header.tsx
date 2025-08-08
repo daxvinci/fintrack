@@ -15,11 +15,11 @@ const Header = () => {
                 <h1 className="sm:text-2xl font-bold">Wallet Ledger</h1>
                 <IoMdArrowDropdown className="hover:cursor-pointer" />
               </div>
-              <Badge text="Active" color="#087a2e" />
+              <Badge text="Active" color="#3A6C7B" />
             </div>
 
             <div className="head-nav-right flex gap-4 items-center">
-              <button className="share-button sm:text-base text-sm hover:cursor-pointer active:translate-y-2 transition-all duration-300 hover:bg-[#6eb0c4] py-1 px-3 rounded-2xl bg-[#4b8b9f]">
+              <button className="share-button sm:text-base text-sm hover:cursor-pointer active:translate-y-2 transition-all duration-300 hover:bg-[#4B8B9F] py-1 px-3 rounded-2xl bg-[#4b8b9f]">
                 Share
               </button>
               <div className="more-button rounded-full p-2 active:scale-50 transition-all duration-300 hover:cursor-pointer border border-gray-400">

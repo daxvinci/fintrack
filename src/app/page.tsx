@@ -12,7 +12,6 @@ export default function Home() {
   const {navActive} = useThemeContext()
   return (
     <div className="py-16 flex sm:gap-8">
-      
       {navActive && <SideNav />}
       <main className="flex w-full flex-col flex-1 gap-4 row-start-2 items-center sm:items-start">
         <Header />
@@ -20,7 +19,7 @@ export default function Home() {
           <div
             className={`pb-2 hover:cursor-pointer ${
               view === "overview"
-                ? "border-b border-blue-300 font-medium"
+                ? "border-b border-[#3E7383] text-[#3E7383] font-medium"
                 : "text-gray-500"
             }`}
             onClick={() => setView("overview")}
@@ -30,7 +29,7 @@ export default function Home() {
           <div
             className={`pb-2 hover:cursor-pointer ${
               view === "transaction"
-                ? "border-b border-blue-300 font-medium"
+                ? "border-b border-[#3E7383] text-[#3E7383] font-medium"
                 : "text-gray-500"
             }`}
             onClick={() => setView("transaction")}
