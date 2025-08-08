@@ -5,8 +5,8 @@ import ThemeContextProvider from "./ThemeContextProvider";
 import { Public_Sans } from "next/font/google";
 
 const publicSans = Public_Sans({
-  subsets: ["latin"], // you can also add "latin-ext"
-  weight: ["400", "500", "700"], // choose weights you need
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "financial tracking app",
   authors: [{ name: "Elvis Okoro" }],
   icons: {
-    icon: "/images/favicon.svg",
+    icon: "/favicon.png",
   },
   keywords: [
     "fintrack",
