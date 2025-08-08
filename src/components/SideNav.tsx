@@ -1,13 +1,32 @@
 "use client"
 
 import { useThemeContext } from "@/app/ThemeContext";
+import { MdOutlineClose } from "react-icons/md";
 
 
 const SideNav = () => {
-    const {active,setActive=()=>{}} = useThemeContext()
+    const {active,setActive=()=>{},setNavActive=()=>{},navActive} = useThemeContext()
     return (
       <>
-          <ul className="sidenav transition-all duration-300 sm:px-0 px-4 absolute left-0 top-5 bottom-0 z-80 bg-[#FCFDFD] sm:bg-transparent sm:static sm:w-[20%]">
+        <div
+          className="side-nav-wrapper flex flex-col gap-6 sm:block
+               backdrop-blur-lg sm:backdrop-blur-none sm:px-0 p-4 
+         absolute inset-0 z-80 bg-[#FCFDFD]/90 
+         sm:bg-transparent sm:static transition-all duration-300 sm:w-[20%]"
+        >
+          <div className="close-button">
+            <MdOutlineClose
+              size={24}
+              className="sm:hidden justify-self-end hover:cursor-pointer"
+              onClick={() => {
+                setNavActive(!navActive);
+              }}
+            />
+          </div>
+          <ul
+            className="sidenav
+           "
+          >
             <li
               onClick={() => setActive("dashboard")}
               className={`nav-itme py-2 px-4 rounded-3xl hover:cursor-pointer ${
@@ -41,6 +60,7 @@ const SideNav = () => {
               Settings
             </li>
           </ul>
+        </div>
       </>
     );
 }

@@ -7,12 +7,11 @@ import Transaction from "@/components/Transaction";
 import { useState } from "react";
 import { useThemeContext } from "./ThemeContext";
 
-
 export default function Home() {
   const [view,setView] = useState("overview")
   const {navActive} = useThemeContext()
   return (
-    <div className="py-16 relative flex sm:gap-8">
+    <div className="py-16 flex sm:gap-8">
       
       {navActive && <SideNav />}
       <main className="flex w-full flex-col flex-1 gap-4 row-start-2 items-center sm:items-start">
