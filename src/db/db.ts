@@ -37,7 +37,7 @@ export const tableHeadData:TableHeadData = {
   type: "Type",
 }
 
-export const TableData:Transactionlog = [
+export const tableData:Transactionlog = [
   {
     date: "2023-10-01",
     remark: "Salary",

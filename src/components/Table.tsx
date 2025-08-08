@@ -1,8 +1,15 @@
-import { TableData, tableHeadData } from "@/db/db";
+import { tableData, tableHeadData } from "@/db/db";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import Badge from "./Badge";
+import { useThemeContext } from "@/app/ThemeContext";
 
 const Table = () => {
+  const {searchValue} = useThemeContext();
+    const filteredData = tableData.filter((data) =>
+      !searchValue
+        ? data
+        : data.remark.toLowerCase().includes(searchValue.toLowerCase())
+    );
     return (
       <>
         <table className="w-full text-left border-separate border-spacing-x-2">
@@ -41,24 +48,34 @@ const Table = () => {
             </tr>
           </thead>
           <tbody>
-            {TableData.map((data, index) => (
-              <tr key={index}>
-                <td className="border-b border-gray-300 py-3">{data.date}</td>
-                <td className="border-b border-gray-300 py-3">{data.remark}</td>
-                <td className="border-b border-gray-300 py-3">
-                  {data.amount < 1 ? "-" : ""}${Math.abs(data.amount)}
-                </td>
-                <td className="border-b border-gray-300 py-3">
-                  {data.currency}
-                </td>
-                <td className="border-b border-gray-300 py-3 px-3">
-                  <Badge
-                    text={data.type}
-                    color={data.type === "Credit" ? "#087a2e" : "#c6381b"}
-                  />
+            {filteredData.length > 0 ? (
+              filteredData.map((data, index) => (
+                <tr key={index}>
+                  <td className="border-b border-gray-300 py-3">{data.date}</td>
+                  <td className="border-b border-gray-300 py-3">
+                    {data.remark}
+                  </td>
+                  <td className="border-b border-gray-300 py-3">
+                    {data.amount < 1 ? "-" : ""}${Math.abs(data.amount)}
+                  </td>
+                  <td className="border-b border-gray-300 py-3">
+                    {data.currency}
+                  </td>
+                  <td className="border-b border-gray-300 py-3 px-3">
+                    <Badge
+                      text={data.type}
+                      color={data.type === "Credit" ? "#087a2e" : "#c6381b"}
+                    />
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={5} className="py-4 text-center text-gray-500">
+                  No transactions found matching &quot;{searchValue}&quot;
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </>
