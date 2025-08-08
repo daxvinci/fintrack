@@ -8,7 +8,7 @@ const Badge = ({text,color}:{text:string,color:string}) => {
             className={`badge-light w-[5px] h-[5px] rounded-full `}
             style={{ backgroundColor: color }}
           />
-          <p className="badge-text">{text}</p>
+          <p className="badge-text sm:text-base text-sm">{text}</p>
         </div>
       </>
     );

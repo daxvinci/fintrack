@@ -12,14 +12,14 @@ const Header = () => {
           <div className="head-nav w-full flex justify-between gap-2">
             <div className="head-nav-left flex gap-4 justify-center items-center">
               <div className="head-text flex items-center gap-2">
-                <h1 className="text-2xl font-bold">Wallet Ledger</h1>
+                <h1 className="sm:text-2xl font-bold">Wallet Ledger</h1>
                 <IoMdArrowDropdown className="hover:cursor-pointer" />
               </div>
               <Badge text="Active" color="#087a2e" />
             </div>
 
             <div className="head-nav-right flex gap-4 items-center">
-              <div className="share-button hover:cursor-pointer active:translate-y-2 transition-all duration-300 hover:bg-[#6eb0c4] py-1 px-3 rounded-2xl bg-[#4b8b9f]">
+              <div className="share-button sm:text-base text-sm hover:cursor-pointer active:translate-y-2 transition-all duration-300 hover:bg-[#6eb0c4] py-1 px-3 rounded-2xl bg-[#4b8b9f]">
                 Share
               </div>
               <div className="more-button rounded-full p-2 active:scale-50 transition-all duration-300 hover:cursor-pointer border border-gray-400">
