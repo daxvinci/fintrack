@@ -38,7 +38,11 @@ const TopNav = () => {
               className="hover:cursor-pointer"
               size={20}
             />
-            <div className="logo hover:cursor-pointer">
+            <div
+              className={`logo hover:cursor-pointer transition-all duration-300 ease-in-out ${
+                searchActive ? "max-w-0 sm:max-w-[100px]" : "max-w-[100px]"
+              } overflow-hidden`}
+            >
               <Image src="/fintrack.svg" alt="logo" width={100} height={100} />
             </div>
           </div>
