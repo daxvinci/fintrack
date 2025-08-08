@@ -15,7 +15,7 @@ const Table = () => {
         <div className="w-full overflow-x-auto">
           <table className="min-w-full text-left border-separate border-spacing-x-2">
             <thead className="bg-[#fcfdfd] w-full">
-              <tr>
+              <tr className="text-gray-500">
                 <th className="py-2 w-1/2">
                   <span className="flex items-center gap-2 border-b border-gray-300 py-3 mr-2">
                     {tableHeadData.date}

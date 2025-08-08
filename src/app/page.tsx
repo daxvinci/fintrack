@@ -15,7 +15,7 @@ export default function Home() {
     <div className="py-16 relative flex sm:gap-8">
       
       {navActive && <SideNav />}
-      <main className="flex flex-col flex-1 gap-4 row-start-2 items-center sm:items-start">
+      <main className="flex w-full flex-col flex-1 gap-4 row-start-2 items-center sm:items-start">
         <Header />
         <div className="view-toggle border-b w-full border-gray-400 flex gap-4">
           <div
