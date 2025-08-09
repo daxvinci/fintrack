@@ -7,7 +7,7 @@ import { useThemeContext } from "@/app/ThemeContext";
 import { useEffect, useRef } from "react";
 
 const TopNav = () => {
-    const {navActive,setSearchValue=()=>{},searchActive,setSearchActive=()=>{},setNavActive=()=>{}} =  useThemeContext()
+    const {navActive,setSearchValue=()=>{},searchValue,searchActive,setSearchActive=()=>{},setNavActive=()=>{}} =  useThemeContext()
     const searchRef = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
@@ -53,6 +53,7 @@ const TopNav = () => {
                   placeholder="Search..."
                   className="border px-2 hidden sm:block py-1 rounded-md text-sm"
                   autoFocus
+                  value={searchValue}
                   onChange={(e) => setSearchValue(e.target.value)}
                 />
               ) : (
@@ -83,6 +84,7 @@ const TopNav = () => {
               placeholder="Search..."
               className="border px-2 w-full mt-4  py-1 rounded-md text-sm"
               autoFocus
+              value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
             />
           </div>
