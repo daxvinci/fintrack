@@ -39,9 +39,7 @@ const TopNav = () => {
               size={20}
             />
             <div
-              className={`logo hover:cursor-pointer transition-all duration-300 ease-in-out ${
-                searchActive ? "max-w-0 sm:max-w-[100px]" : "max-w-[100px]"
-              } overflow-hidden`}
+              className={`logo hover:cursor-pointer transition-all duration-300 ease-in-out max-w-[100px] overflow-hidden`}
             >
               <Image src="/fintrack.svg" alt="logo" width={100} height={100} />
             </div>
@@ -53,7 +51,7 @@ const TopNav = () => {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="border px-2 py-1 rounded-md text-sm"
+                  className="border px-2 hidden sm:block py-1 rounded-md text-sm"
                   autoFocus
                   onChange={(e) => setSearchValue(e.target.value)}
                 />
@@ -78,6 +76,17 @@ const TopNav = () => {
             </div>
           </div>
         </nav>
+        {searchActive && (
+          <div ref={searchRef} className="search w-full block sm:hidden">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="border px-2 w-full mt-4  py-1 rounded-md text-sm"
+              autoFocus
+              onChange={(e) => setSearchValue(e.target.value)}
+            />
+          </div>
+        )}
       </>
     );
 }
