@@ -11,7 +11,7 @@ const SideNav = () => {
         <div
           className="side-nav-wrapper flex flex-col gap-6 sm:block
                backdrop-blur-lg sm:backdrop-blur-none sm:px-0 p-4 
-         absolute inset-0 z-80 bg-[#FCFDFD]/90 
+         fixed inset-0 z-80 bg-[#FCFDFD]/90 
          sm:bg-transparent sm:static transition-all duration-300 sm:w-[25%]"
         >
           <div className="close-button">
