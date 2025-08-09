@@ -9,8 +9,8 @@ const Header = () => {
     return (
       <>
         <div className="head-wrapper w-full flex flex-col gap-4 sm:gap-2">
-          <div className="head-nav w-full flex justify-between gap-2">
-            <div className="head-nav-left flex gap-4 justify-center items-center">
+          <div className="head-nav w-full flex sm:flex-row flex-col justify-between gap-2">
+            <div className="head-nav-left flex gap-4 sm:justify-center items-center">
               <div className="head-text flex items-center gap-2">
                 <h1 className="sm:text-2xl font-bold">Wallet Ledger</h1>
                 <IoMdArrowDropdown className="hover:cursor-pointer" />
